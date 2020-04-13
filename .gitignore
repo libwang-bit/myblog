@@ -7,7 +7,9 @@ yarn-error.log*
 /test/unit/coverage/
 /test/e2e/reports/
 selenium-debug.log
-
+build/
+static/
+test/
 # Editor directories and files
 .idea
 .vscode
@@ -15,3 +17,8 @@ selenium-debug.log
 *.ntvs*
 *.njsproj
 *.sln
+.editorconfig
+.eslintignore
+.eslintrc.js
+.postcssrc.js
+
