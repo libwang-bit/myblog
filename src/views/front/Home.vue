@@ -24,13 +24,13 @@
 <!--    <div class="content-container" :class="{mobile: mobileFlag}" ref="contentContainer">-->
 <!--      <article-list></article-list>-->
 <!--    </div>-->
-<!--    <bottom-footer v-if="!mobileFlag"></bottom-footer>-->
+    <bottom-footer></bottom-footer>
   </div>
 </template>
 
 <script>
 import TopHeader from '@/components/front/TopHeader';
-// import BottomFooter from '@/components/front/BottomFooter'
+import BottomFooter from '@/components/front/BottomFooter'
 // import ArticleList from '@/components/front/ArticleList'
 import IconFont from '@/components/Iconfont';
 // import { mapGetters, mapMutations } from 'vuex'
@@ -60,7 +60,7 @@ export default {
   },
   components: {
     TopHeader,
-    // BottomFooter,
+    BottomFooter,
     // ArticleList,
     IconFont
   }

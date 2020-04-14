@@ -6,16 +6,18 @@
         <el-timeline-item v-for="(list, key) in catalog" :key="key" :timestamp="key" placement="top">
           <el-card class="catalog-card" v-for="(item, i) in list" :key="i" @click.native="goDetail(item)">
             <h4>{{ item.title }}</h4>
-<!--            <p>浏览量 {{ item.view }}，最后编辑于 {{ item.updateTime }}</p>-->
+            <p>最后编辑于 {{ item.update_time }}</p>
           </el-card>
         </el-timeline-item>
       </el-timeline>
     </div>
+    <bottom-footer></bottom-footer>
   </div>
 </template>
 
 <script>
   import TopHeader from '@/components/front/TopHeader'
+  import BottomFooter from '@/components/front/BottomFooter'
   import IconFont from '@/components/Iconfont'
   import { dateFormat } from '@/common/js/tool.js'
 
@@ -55,7 +57,7 @@ export default {
   },
   components: {
     TopHeader,
-    // BottomFooter,
+    BottomFooter,
     IconFont
   }
 }

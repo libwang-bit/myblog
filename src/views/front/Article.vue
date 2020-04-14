@@ -15,11 +15,13 @@
       </mavon-editor>
       </div>
     </div>
+    <bottom-footer></bottom-footer>
   </div>
 </template>
 
 <script>
   import TopHeader from '@/components/front/TopHeader'
+  import BottomFooter from '@/components/front/BottomFooter'
   import IconFont from '@/components/Iconfont'
 
   export default {
@@ -47,7 +49,7 @@
       },
       components: {
         TopHeader,
-        // BottomFooter,
+        BottomFooter,
         IconFont
       }
 

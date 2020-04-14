@@ -3,19 +3,20 @@
     <top-header ref="topHeader"></top-header>
     <div class="background" ref="background">
     </div>
+    <bottom-footer></bottom-footer>
   </div>
 </template>
 
 <script>
   import TopHeader from '@/components/front/TopHeader';
-  // import BottomFooter from '@/components/front/BottomFooter'
+  import BottomFooter from '@/components/front/BottomFooter'
   // import ArticleList from '@/components/front/ArticleList'
   import IconFont from '@/components/Iconfont';
   export default {
     name: "About",
     components: {
       TopHeader,
-      // BottomFooter,
+      BottomFooter,
       // ArticleList,
       IconFont
     }
