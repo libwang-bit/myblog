@@ -12,7 +12,7 @@ const pool = mysql.createPool({
 });
 
 module.exports = {
-  addArticle(req, res, next) {
+  addArticle(req, res) {
     const title = req.body.title, content = req.body.content, markdown = req.body.markdown;
     pool.getConnection((err, connection) => {
       if (err) {
@@ -29,7 +29,7 @@ module.exports = {
       })
     })
   },
-  editArticle(req, res, next) {
+  editArticle(req, res) {
     const id = req.body.id, title = req.body.title, content = req.body.content, markdown = req.body.markdown;
     pool.getConnection((err, connection) => {
       if (err) {
@@ -46,17 +46,22 @@ module.exports = {
       })
     })
   },
-  getArticle(req, res, next) {
+  getArticle(req, res) {
     const id = req.body.id;
     pool.getConnection((err, connection) => {
       const sql = sqlMap.getArticle;
       connection.query(sql, [id], (err, result) => {
         res.json(result);
-        connection.release();
-      })
+
+        // 浏览量+1
+        var updateSql = sqlMap.updateView;
+        connection.query(updateSql, [id]);
+
+      });
+      connection.release();
     })
   },
-  getCatalog(req, res, next) {
+  getCatalog(req, res) {
     pool.getConnection((err, connection) => {
       const sql = sqlMap.getCatalog;
       connection.query(sql, [], (err, result) => {

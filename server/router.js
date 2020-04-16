@@ -11,7 +11,7 @@ router.post('/setValue', (req, res, next) => {
 });
 
 router.post('/article/add', (req, res, next) => {
-  api.addArticle(req, res, next);
+  api.addArticle(req, res);
 });
 
 router.post('/article/edit', (req, res, next) => {

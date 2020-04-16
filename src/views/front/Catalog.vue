@@ -6,7 +6,7 @@
         <el-timeline-item v-for="(list, key) in catalog" :key="key" :timestamp="key" placement="top">
           <el-card class="catalog-card" v-for="(item, i) in list" :key="i" @click.native="goDetail(item)">
             <h4>{{ item.title }}</h4>
-            <p>最后编辑于 {{ item.update_time }}</p>
+            <p> 浏览量: {{item.view_count}}, 最后编辑于 {{ item.update_time }}</p>
           </el-card>
         </el-timeline-item>
       </el-timeline>
@@ -47,8 +47,6 @@ export default {
           }
           this.catalog[time].push(ele)
         });
-        // var first = {id:1, title: 'test', create_time:'2020-03-10', update_time:'2020-03-10'};
-        // this.catalog['2020-03-10'].push(first);
       })
     },
     goDetail(article) {
