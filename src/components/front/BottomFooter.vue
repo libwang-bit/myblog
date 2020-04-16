@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-containe">
+  <div class="footer-container">
     <div class="rights">
       <p>Copyright © 2017 - {{ new Date().getFullYear() }} Ruirui's Blog</p>
     </div>
@@ -11,7 +11,7 @@
 
 <style lang="scss" scoped>
   @import '@/common/css/variable.scss';
-  .footer-containe {
+  .footer-container {
     height: 32px;
     line-height: 32px;
     font-size: 12px;
