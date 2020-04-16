@@ -7,9 +7,9 @@
 
     <img class="img-background" ref="imgBackground" src="https://cl8023-1255423800.cos.ap-guangzhou.myqcloud.com/about-1.png" alt="">
 
-    <video class="video-background" autoplay loop muted plays-inline>
-      <source src="https://cl8023-1255423800.cos.ap-guangzhou.myqcloud.com/about-2.mp4" type="video/mp4">
-    </video>
+<!--    <video class="video-background" autoplay loop muted plays-inline>-->
+<!--      <source src="https://cl8023-1255423800.cos.ap-guangzhou.myqcloud.com/about-2.mp4" type="video/mp4">-->
+<!--    </video>-->
 
     <div class="about-content">
       <div class="about-item about-self about-item-active" ref="item1">

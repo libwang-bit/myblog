@@ -21,8 +21,6 @@ export default {
       navList: [
         {name: '主页', to: '/'},
         {name: '目录', to: '/catalog'},
-        {name: 'BLOG', to: '/'},
-        {name: '其他', to: '/'},
         {name: '关于', to: '/about'}
       ],
       activeIndex: -1,
