@@ -5,50 +5,29 @@
       <div class="background" ref="background">
         <div class="txt">
           <p>I'm Ruirui</p>
-          <div class="social-wrapper">
-            <a href="https://github.com/Moon-Future/vue-node-blog" target="_blank">
-              <icon-font class="social-icon" icon="icon-github" fontSize="42"></icon-font>
-            </a>
-            <el-popover
-              placement="bottom"
-              trigger="hover">
-<!--              <img class="wechat" src="../../assets/Wechat.jpg" alt="">-->
-              <template slot="reference">
-                <icon-font class="social-icon" icon="icon-weixin" fontSize="42"></icon-font>
-              </template>
-            </el-popover>
-          </div>
         </div>
       </div>
     </div>
-<!--    <div class="content-container" :class="{mobile: mobileFlag}" ref="contentContainer">-->
-<!--      <article-list></article-list>-->
-<!--    </div>-->
     <bottom-footer></bottom-footer>
   </div>
 </template>
 
 <script>
 import TopHeader from '@/components/front/TopHeader';
-import BottomFooter from '@/components/front/BottomFooter'
-// import ArticleList from '@/components/front/ArticleList'
-import IconFont from '@/components/Iconfont';
-// import { mapGetters, mapMutations } from 'vuex'
+import BottomFooter from '@/components/front/BottomFooter';
+
 export default {
   name: 'home',
   props: ['resize'],
   created () {
-    // this.setMobile()
   },
   mounted () {
     this.setHeight()
   },
   methods: {
     setHeight () {
-      // const width = document.documentElement.clientWidth
       const height = document.documentElement.clientHeight;
       this.$refs.background.style.height = height + 'px';
-      // this.$refs.contentContainer.style.minHeight = height + 'px';
     }
   },
   watch: {
@@ -60,9 +39,7 @@ export default {
   },
   components: {
     TopHeader,
-    BottomFooter,
-    // ArticleList,
-    IconFont
+    BottomFooter
   }
 }
 </script>
@@ -90,35 +67,5 @@ export default {
   color: $color-white;
   font-size: 32px;
   font-family: KaiTi, SimSun;
-  .first-line {
-    text-indent: -50px;
-  }
-  .second-line {
-    text-indent: 50px;
-  }
-}
-.social-wrapper {
-  margin-top: 10px;
-  .social-icon {
-    cursor: pointer;
-    margin-right: 10px;
-    &:hover {
-      color: $color-blue;
-    }
-  }
-  .wechat {
-    width: 200px;
-    height: 200px;;
-  }
-}
-.content-container {
-  padding: 20px 30px;
-  background: $color-white;
-  display: flex;
-  position: relative;
-  box-sizing: border-box;
-  &.mobile {
-    padding: initial;
-  }
 }
 </style>
